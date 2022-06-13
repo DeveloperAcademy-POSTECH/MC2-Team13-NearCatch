@@ -13,6 +13,12 @@ struct HomeView: View {
     
     var body: some View {
         ZStack() {
+            Image("img_basicbackground")
+                .resizable()
+                .ignoresSafeArea()
+            
+            LottieView(jsonName: "Star")
+            
             VStack {
                 HStack {
                     Spacer()

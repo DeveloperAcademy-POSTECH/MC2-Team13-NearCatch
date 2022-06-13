@@ -19,7 +19,7 @@ struct ContentView: View {
             HomeView()
             
             if !isContentReady {
-                LottieView()
+                LottieView(jsonName: "lodingAnim")
                     .background(Color.white.edgesIgnoringSafeArea(.all))
                     .transition(.opacity)
             }
@@ -34,6 +34,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ContentView()
     }
 }

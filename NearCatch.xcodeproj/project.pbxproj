@@ -34,12 +34,15 @@
 		21F1AD39285336940016185A /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F1AD38285336940016185A /* Extension.swift */; };
 		6F5711772851D7FF00B094C2 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5711762851D7FF00B094C2 /* ProfileView.swift */; };
 		6F7303C22851EA8A00CC8115 /* SharedCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7303C12851EA8A00CC8115 /* SharedCustomButton.swift */; };
+		6F9649702856222C00A54645 /* ProfileInterestCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F96496F2856222C00A54645 /* ProfileInterestCard.swift */; };
+		7020CBE9285664BC006D07E7 /* Star.json in Resources */ = {isa = PBXBuildFile; fileRef = 7020CBE8285664BC006D07E7 /* Star.json */; };
 		7072D6E0285337E8008594E5 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7072D6DF285337E8008594E5 /* Colors.xcassets */; };
 		7072D6E228533929008594E5 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072D6E128533929008594E5 /* Colors.swift */; };
 		7072D6E728533F4D008594E5 /* 온글잎 의연체.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7072D6E628533F4D008594E5 /* 온글잎 의연체.ttf */; };
 		7072D6EB28549A71008594E5 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 7072D6EA28549A71008594E5 /* Lottie */; };
 		7072D6ED28549B28008594E5 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072D6EC28549B28008594E5 /* LottieView.swift */; };
 		7072D6F028549BBD008594E5 /* lodingAnim.json in Resources */ = {isa = PBXBuildFile; fileRef = 7072D6EF28549BBD008594E5 /* lodingAnim.json */; };
+		71C96D302855CD5100ED9A9F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C96D2F2855CD5100ED9A9F /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,12 +74,15 @@
 		21F1AD38285336940016185A /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		6F5711762851D7FF00B094C2 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		6F7303C12851EA8A00CC8115 /* SharedCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedCustomButton.swift; sourceTree = "<group>"; };
+		6F96496F2856222C00A54645 /* ProfileInterestCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInterestCard.swift; sourceTree = "<group>"; };
+		7020CBE8285664BC006D07E7 /* Star.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Star.json; path = LottieJson/Star.json; sourceTree = SOURCE_ROOT; };
 		7072D6DF285337E8008594E5 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		7072D6E128533929008594E5 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		7072D6E628533F4D008594E5 /* 온글잎 의연체.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "온글잎 의연체.ttf"; sourceTree = "<group>"; };
 		7072D6E8285341F1008594E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7072D6EC28549B28008594E5 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		7072D6EF28549BBD008594E5 /* lodingAnim.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lodingAnim.json; sourceTree = "<group>"; };
+		71C96D2F2855CD5100ED9A9F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,7 @@
 		16514B64284F313B007A1BB5 = {
 			isa = PBXGroup;
 			children = (
+				71C96D2F2855CD5100ED9A9F /* CoreDataManager.swift */,
 				16514B6F284F313B007A1BB5 /* NearCatch */,
 				16514B6E284F313B007A1BB5 /* Products */,
 			);
@@ -245,9 +252,18 @@
 		6F5711752851D7EE00B094C2 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				6F96496E285621F000A54645 /* Components */,
 				6F5711762851D7FF00B094C2 /* ProfileView.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		6F96496E285621F000A54645 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6F96496F2856222C00A54645 /* ProfileInterestCard.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		7072D6E328533EC3008594E5 /* fonts */ = {
@@ -263,6 +279,7 @@
 			children = (
 				7072D6EC28549B28008594E5 /* LottieView.swift */,
 				7072D6EF28549BBD008594E5 /* lodingAnim.json */,
+				7020CBE8285664BC006D07E7 /* Star.json */,
 			);
 			path = Lottie;
 			sourceTree = "<group>";
@@ -331,6 +348,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7020CBE9285664BC006D07E7 /* Star.json in Resources */,
 				7072D6E0285337E8008594E5 /* Colors.xcassets in Resources */,
 				16514B78284F313D007A1BB5 /* Preview Assets.xcassets in Resources */,
 				21352D522855C89700429DC0 /* NearCatchHeartbeat.ahap in Resources */,
@@ -357,6 +375,7 @@
 				21F1AD35285336810016185A /* CustomSheet.swift in Sources */,
 				219F89602854E036003AF02A /* SearchView.swift in Sources */,
 				16AEB31C2851C3820034CC0F /* HomeView.swift in Sources */,
+				6F9649702856222C00A54645 /* ProfileInterestCard.swift in Sources */,
 				21F1AD2D285336470016185A /* CircleButton.swift in Sources */,
 				16514B7D284F313D007A1BB5 /* NearCatch.xcdatamodeld in Sources */,
 				7072D6ED28549B28008594E5 /* LottieView.swift in Sources */,
@@ -368,6 +387,7 @@
 				6F7303C22851EA8A00CC8115 /* SharedCustomButton.swift in Sources */,
 				21F1AD372853368B0016185A /* ProfilePicture.swift in Sources */,
 				21F1AD33285336720016185A /* Bubble.swift in Sources */,
+				71C96D302855CD5100ED9A9F /* CoreDataManager.swift in Sources */,
 				219F895E2854DE93003AF02A /* PermissionCheckView.swift in Sources */,
 				0EBDD7502851E2AF0081C832 /* PageControlView.swift in Sources */,
 				164A4A752854C47400CA8B0A /* NISessionManager.swift in Sources */,
@@ -501,7 +521,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NearCatch/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = UYQK5W3Y6T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NearCatch/Info.plist;
@@ -534,7 +554,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NearCatch/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = UYQK5W3Y6T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NearCatch/Info.plist;
