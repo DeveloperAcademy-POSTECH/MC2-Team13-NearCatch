@@ -27,7 +27,7 @@ struct Keywords: View {
             ForEach(getRows(), id: \.self) { rows in
                 HStack(alignment: .center, spacing: 5) {
                     ForEach(rows) { row in
-                        Text(row.name)
+                        Text(LocalizedStringKey(row.name))
                             .lineLimit(1)
                             .font(.custom("온글잎 의연체", size: 22))
                             .tagView(.black, .PrimaryColor)

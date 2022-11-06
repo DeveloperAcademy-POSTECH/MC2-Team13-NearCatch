@@ -27,7 +27,7 @@ struct SettingButton: View {
             
             //버튼에 들어가는 텍스트
             HStack{
-                Text(text)
+                Text(LocalizedStringKey(text))
                     .font(.custom("온글잎 의연체", size:22))
                     .foregroundColor(.white)
                 Spacer()

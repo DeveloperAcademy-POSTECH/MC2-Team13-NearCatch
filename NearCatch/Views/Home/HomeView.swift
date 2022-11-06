@@ -34,14 +34,14 @@ struct HomeView: View {
                             switch
                             niObject.gameState{
                             case.finding:
-                           Image("img_shooting")
-                                .offset(x: -80, y: -340)
+                                Image("img_shooting")
+                                    .offset(x: -80, y: -340)
                             case.found:
                                 Image("img_shooting")
-                                     .offset(x: -80, y: -340)
+                                    .offset(x: -80, y: -340)
                             case.ready:
                                 Text("")
-                            
+                                
                             }
                         }
                         VStack{
@@ -49,14 +49,16 @@ struct HomeView: View {
                             niObject.gameState{
                             case.finding:
                                 VStack {
-                                    Text("니어캣이".partialColor(["니어캣"], .PrimaryColor))
+                                    Text(
+                                        PartialColor.partialColorString(allString: "니어캣이", allStringColor: .white, partialString: "니어캣", partialStringColor: .PrimaryColor)
+                                    )
                                     Text("인연의 별을 찾고 있어요!")
                                 }
                                 .font(.custom("온글잎 의연체", size: 28))
                                 .multilineTextAlignment(.center)
                             case.found:
                                 VStack {
-                                    Text("니어캣이".partialColor(["니어캣"], .PrimaryColor))
+                                    Text(PartialColor.partialColorString(allString: "니어캣이", allStringColor: .white, partialString: "니어캣", partialStringColor: .PrimaryColor))
                                     Text("인연의 별을 찾았어요!")
                                 }
                                 .font(.custom("온글잎 의연체", size: 28))
@@ -90,26 +92,27 @@ struct HomeView: View {
                             }
                         }
                     }
-                }
-                
-                HomeMainButton(state: $niObject.gameState) {
-                    withAnimation {
-                        switch niObject.gameState {
-                        case .ready:
-                            niObject.start()
-                            niObject.gameState = .finding
-                            if isLaunched {
-                                localNetAuth.requestAuthorization { auth in
-                                    isLocalNetworkPermissionDenied = !auth
+                    
+                    
+                    HomeMainButton(state: $niObject.gameState) {
+                        withAnimation {
+                            switch niObject.gameState {
+                            case .ready:
+                                niObject.start()
+                                niObject.gameState = .finding
+                                if isLaunched {
+                                    localNetAuth.requestAuthorization { auth in
+                                        isLocalNetworkPermissionDenied = !auth
+                                    }
+                                    isLaunched = false
                                 }
-                                isLaunched = false
+                            case .finding:
+                                niObject.stop()
+                                niObject.gameState = .ready
+                            case .found:
+                                niObject.stop()
+                                niObject.gameState = .ready
                             }
-                        case .finding:
-                            niObject.stop()
-                            niObject.gameState = .ready
-                        case .found:
-                            niObject.stop()
-                            niObject.gameState = .ready
                         }
                     }
                 }
@@ -150,5 +153,7 @@ struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
             .preferredColorScheme(.dark)
+            .environment(\.locale, .init(identifier: "ko"))
     }
 }
+

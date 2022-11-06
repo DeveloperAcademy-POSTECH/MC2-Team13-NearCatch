@@ -49,12 +49,12 @@ struct SettingKeywordView: View {
                             }){
                                 ZStack{
                                     if tagData.Tags[i].isSelected == true{
-                                        Text(tagData.Tags[i].name)
+                                        Text(LocalizedStringKey(tagData.Tags[i].name))
                                             .font(.custom("온글잎 의연체", size: 22))
                                             .tagView(.black, .PrimaryColor)
                                     }
                                     else{
-                                        Text(tagData.Tags[i].name)
+                                        Text(LocalizedStringKey(tagData.Tags[i].name))
                                             .font(.custom("온글잎 의연체", size: 22))
                                             .tagView(.gray, .ThirdColor)
                                     }
@@ -76,15 +76,14 @@ struct SettingKeywordView: View {
                             }){
                                 ZStack{
                                     if tagData.Tags[i].isSelected == true{
-                                        Text(tagData.Tags[i].name)
+                                        Text(LocalizedStringKey(tagData.Tags[i].name))
                                             .font(.custom("온글잎 의연체", size: 22))
                                             .tagView(.black, .PrimaryColor)
                                     }
                                     else{
-                                        Text(tagData.Tags[i].name)
+                                        Text(LocalizedStringKey(tagData.Tags[i].name))
                                             .font(.custom("온글잎 의연체", size: 22))
                                             .tagView(.gray, .ThirdColor)
-                                        
                                     }
                                 }
                             }
@@ -104,12 +103,12 @@ struct SettingKeywordView: View {
                             }){
                                 ZStack{
                                     if tagData.Tags[i].isSelected == true{
-                                        Text(tagData.Tags[i].name)
+                                        Text(LocalizedStringKey(tagData.Tags[i].name))
                                             .font(.custom("온글잎 의연체", size: 22))
                                             .tagView(.black, .PrimaryColor)
                                     }
                                     else{
-                                        Text(tagData.Tags[i].name)
+                                        Text(LocalizedStringKey(tagData.Tags[i].name))
                                             .font(.custom("온글잎 의연체", size: 22))
                                             .tagView(.gray, .ThirdColor)
                                     }
@@ -129,12 +128,12 @@ struct SettingKeywordView: View {
                                 }
                             }){
                                 if tagData.Tags[i].isSelected == true{
-                                    Text(tagData.Tags[i].name)
+                                    Text(LocalizedStringKey(tagData.Tags[i].name))
                                         .font(.custom("온글잎 의연체", size: 22))
                                         .tagView(.black, .PrimaryColor)
                                 }
                                 else{
-                                    Text(tagData.Tags[i].name)
+                                    Text(LocalizedStringKey(tagData.Tags[i].name))
                                         .font(.custom("온글잎 의연체", size: 22))
                                         .tagView(.gray, .ThirdColor)
                                 }
@@ -156,12 +155,12 @@ struct SettingKeywordView: View {
                             }){
                                 ZStack{
                                     if tagData.Tags[i].isSelected == true{
-                                        Text(tagData.Tags[i].name)
+                                        Text(LocalizedStringKey(tagData.Tags[i].name))
                                             .font(.custom("온글잎 의연체", size: 22))
                                             .tagView(.black, .PrimaryColor)
                                     }
                                     else{
-                                        Text(tagData.Tags[i].name)
+                                        Text(LocalizedStringKey(tagData.Tags[i].name))
                                             .font(.custom("온글잎 의연체", size: 22))
                                             .tagView(.gray, .ThirdColor)
                                     }
@@ -182,12 +181,12 @@ struct SettingKeywordView: View {
                                 }
                             }){
                                 if tagData.Tags[i].isSelected == true{
-                                    Text(tagData.Tags[i].name)
+                                    Text(LocalizedStringKey(tagData.Tags[i].name))
                                         .font(.custom("온글잎 의연체", size: 22))
                                         .tagView(.black, .PrimaryColor)
                                 }
                                 else{
-                                    Text(tagData.Tags[i].name)
+                                    Text(LocalizedStringKey(tagData.Tags[i].name))
                                         .font(.custom("온글잎 의연체", size: 22))
                                         .tagView(.gray, .ThirdColor)
                                 }

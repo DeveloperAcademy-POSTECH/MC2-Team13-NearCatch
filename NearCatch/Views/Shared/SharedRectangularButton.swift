@@ -18,7 +18,7 @@ struct SharedRectangularButton: View {
             RoundedRectangle(cornerRadius:10)
                 .fill(rectColor)
                 .frame(width:rectWidth, height:50)
-            Text(text)
+            Text(LocalizedStringKey(text))
                 .font(.custom("온글잎 의연체", size:28))
                 .foregroundColor(textColor)
         }

@@ -20,6 +20,7 @@ struct Match: View {
             VStack(spacing: 20) {
                 Text("다음 주제로 대화해보세요!".partialColor(["다음 주제로"], .PrimaryColor))
                     .font(.custom("온글잎 의연체", size: 34))
+                    .multilineTextAlignment(.center)
                 VStack(spacing: 15) {
                     ProfilePicture(imageData: imageData ?? .add)
                             .frame(width: 120, height: 120)

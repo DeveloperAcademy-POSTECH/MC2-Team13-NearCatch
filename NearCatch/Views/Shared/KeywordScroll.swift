@@ -30,7 +30,7 @@ struct KeywordScroll: View {
                     HStack (alignment: .center, spacing: 5) {
                         ForEach(tags) { tag in
                             if tags.firstIndex(of: tag) ?? 0 <= keywordCut {
-                                Text(tag.name)
+                                Text(LocalizedStringKey(tag.name))
                                     .font(.custom("온글잎 의연체", size: 22))
                                     .tagView(.black, .PrimaryColor)
                                     .fixedSize(horizontal: true, vertical: false)
@@ -40,7 +40,7 @@ struct KeywordScroll: View {
                     HStack (alignment: .center, spacing: 5) {
                         ForEach(tags) { tag in
                             if tags.firstIndex(of: tag) ?? 0 > keywordCut {
-                                Text(tag.name)
+                                Text(LocalizedStringKey(tag.name))
                                     .font(.custom("온글잎 의연체", size: 22))
                                     .tagView(.black, .PrimaryColor)
                                     .fixedSize(horizontal: true, vertical: false)

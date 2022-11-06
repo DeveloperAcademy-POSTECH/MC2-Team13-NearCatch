@@ -26,7 +26,7 @@ struct SettingProfileImageView: View {
     @State private var isPresentedPermissionCheck = false
 //    @State var imageWasImported = false
     
-    var inlineColorText: AttributedString = partialColorString(allString:"재간둥이 니어캣", allStringColor:.white,partialString:"니어캣",partialStringColor:Color(red: 255/255, green: 236/255, blue: 108/255))
+    var inlineColorText: AttributedString = PartialColor.partialColorString(allString:"재간둥이 니어캣", allStringColor:.white,partialString:"니어캣",partialStringColor:Color(red: 255/255, green: 236/255, blue: 108/255))
     let accessLevel: PHAccessLevel = .readWrite
     
     var body: some View {
@@ -88,19 +88,6 @@ struct SettingProfileImageView: View {
     }
 
 }
-
-
-func partialColorString(allString: String,allStringColor: Color ,partialString: String, partialStringColor: Color ) -> AttributedString {
-    var string = AttributedString(allString)
-    string.foregroundColor = allStringColor
-    
-    if let range = string.range(of: partialString) {
-        string[range].foregroundColor = partialStringColor
-    }
-    return string
-}
-
-    
     
 struct SettingProfileImageView_Previews: PreviewProvider {
     static var previews: some View {
